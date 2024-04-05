@@ -1,6 +1,5 @@
 package marco.U5W2D4.entities;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
@@ -88,46 +87,46 @@ public class AppConfig {
         return new Drink("Wine", 607, 7.49);
     }
 
-    @Bean(name = "menu")
-    public Menu menuBean() {
-        List<Pizza> pizzaList = new ArrayList<>();
-        List<Drink> drinkList = new ArrayList<>();
-        List<Topping> toppingsList = new ArrayList<>();
+//    @Bean(name = "menu")
+//    public Menu menuBean() {
+//        List<Pizza> pizzaList = new ArrayList<>();
+//        List<Drink> drinkList = new ArrayList<>();
+//        List<Topping> toppingsList = new ArrayList<>();
+//
+//        pizzaList.add(pizzaMargheritaBean());
+//        pizzaList.add(pizzaHawaiianBean());
+//        pizzaList.add(pizzaSalamiBean());
+//        pizzaList.add(pizzaSalamiXlBean());
+//
+//        drinkList.add(lemonadeBean());
+//        drinkList.add(waterBean());
+//        drinkList.add(wineBean());
+//
+//        toppingsList.add(toppingTomatoBean());
+//        toppingsList.add(toppingCheeseBean());
+//        toppingsList.add(toppingSalamiBean());
+//        toppingsList.add(toppingHamBean());
+//        toppingsList.add(toppingPineappleBean());
+//
+//        return new Menu(pizzaList, drinkList, toppingsList);
+//
+//    }
+//
+//    @Bean("Tavolo1")
+//    Table getTable1(@Value("${cover.price}") double coverPrice) {
+//        return new Table(1, 5, true, coverPrice);
+//    }
+//
+//    @Bean("Tavolo2")
+//    Table getTable2(@Value("${cover.price}") double coverPrice) {
+//        return new Table(2, 4, true, coverPrice);
+//    }
+//
+//    @Bean("Tavolo3")
+//    Table getTable3(@Value("${cover.price}") double coverPrice) {
+//        return new Table(3, 8, true, coverPrice);
 
-        pizzaList.add(pizzaMargheritaBean());
-        pizzaList.add(pizzaHawaiianBean());
-        pizzaList.add(pizzaSalamiBean());
-        pizzaList.add(pizzaSalamiXlBean());
-
-        drinkList.add(lemonadeBean());
-        drinkList.add(waterBean());
-        drinkList.add(wineBean());
-
-        toppingsList.add(toppingTomatoBean());
-        toppingsList.add(toppingCheeseBean());
-        toppingsList.add(toppingSalamiBean());
-        toppingsList.add(toppingHamBean());
-        toppingsList.add(toppingPineappleBean());
-
-        return new Menu(pizzaList, drinkList, toppingsList);
-
-    }
-
-    @Bean("Tavolo1")
-    Table getTable1(@Value("${cover.price}") double coverPrice) {
-        return new Table(1, 5, true, coverPrice);
-    }
-
-    @Bean("Tavolo2")
-    Table getTable2(@Value("${cover.price}") double coverPrice) {
-        return new Table(2, 4, true, coverPrice);
-    }
-
-    @Bean("Tavolo3")
-    Table getTable3(@Value("${cover.price}") double coverPrice) {
-        return new Table(3, 8, true, coverPrice);
-
-    }
 }
+
 
 

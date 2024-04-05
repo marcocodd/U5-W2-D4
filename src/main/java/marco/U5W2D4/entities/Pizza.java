@@ -1,13 +1,18 @@
 package marco.U5W2D4.entities;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 import lombok.Getter;
 
 import java.util.List;
 
 @Getter
+@Entity
+@Table(name = "pizza")
 public class Pizza extends Item {
     private String name;
-
+    @OneToMany
     private List<Topping> toppingList;
     private boolean isXl = false;
 
